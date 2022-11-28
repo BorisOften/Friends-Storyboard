@@ -15,6 +15,9 @@
 		81A32E6929354B14001CCF81 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A32E6829354B14001CCF81 /* LoginViewController.swift */; };
 		81A32E6B29354B2D001CCF81 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A32E6A29354B2D001CCF81 /* HomeScreenViewController.swift */; };
 		81A32E6D29354B44001CCF81 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A32E6C29354B44001CCF81 /* DetailViewController.swift */; };
+		81A32E6F29354F9B001CCF81 /* DetailView+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A32E6E29354F9B001CCF81 /* DetailView+SetupUI.swift */; };
+		81F674192935580400B1793C /* HomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F674182935580400B1793C /* HomeScreenCell.swift */; };
+		81F6741E293559E000B1793C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F6741D293559E000B1793C /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		81A32E6829354B14001CCF81 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81A32E6A29354B2D001CCF81 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		81A32E6C29354B44001CCF81 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		81A32E6E29354F9B001CCF81 /* DetailView+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+SetupUI.swift"; sourceTree = "<group>"; };
+		81F674182935580400B1793C /* HomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCell.swift; sourceTree = "<group>"; };
+		81F6741D293559E000B1793C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,10 @@
 		81A32E492935496E001CCF81 /* Friends-Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				81F6741A2935596700B1793C /* Model */,
 				81A32E4A2935496E001CCF81 /* AppDelegate.swift */,
 				81A32E502935496E001CCF81 /* Main.storyboard */,
+				81A32E5829354970001CCF81 /* Info.plist */,
 				81A32E5F293549A8001CCF81 /* Login */,
 				81A32E60293549BE001CCF81 /* HomeScreen */,
 				81A32E61293549D3001CCF81 /* Details */,
@@ -76,7 +84,6 @@
 				81A32E4C2935496E001CCF81 /* SceneDelegate.swift */,
 				81A32E5329354970001CCF81 /* Assets.xcassets */,
 				81A32E5529354970001CCF81 /* LaunchScreen.storyboard */,
-				81A32E5829354970001CCF81 /* Info.plist */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -134,6 +141,7 @@
 		81A32E6529354A27001CCF81 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				81F674182935580400B1793C /* HomeScreenCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,8 +157,17 @@
 		81A32E6729354A49001CCF81 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				81A32E6E29354F9B001CCF81 /* DetailView+SetupUI.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		81F6741A2935596700B1793C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81F6741D293559E000B1793C /* Person.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +246,9 @@
 				81A32E6D29354B44001CCF81 /* DetailViewController.swift in Sources */,
 				81A32E4B2935496E001CCF81 /* AppDelegate.swift in Sources */,
 				81A32E4D2935496E001CCF81 /* SceneDelegate.swift in Sources */,
+				81F674192935580400B1793C /* HomeScreenCell.swift in Sources */,
+				81F6741E293559E000B1793C /* Person.swift in Sources */,
+				81A32E6F29354F9B001CCF81 /* DetailView+SetupUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
