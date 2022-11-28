@@ -15,8 +15,11 @@ class HomeScreenCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        style()
     }
     
+    func style() {
+        selectionStyle = .none
+    }
 
 }

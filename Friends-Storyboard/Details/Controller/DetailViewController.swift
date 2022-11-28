@@ -9,10 +9,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var detailTitle: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        style()
     }
 
 }

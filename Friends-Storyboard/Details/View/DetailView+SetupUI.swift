@@ -11,5 +11,8 @@ extension DetailViewController {
     
     func style() {
         
+        if let title = detailTitle{
+            navigationItem.title = title
+        }
     }
 }
