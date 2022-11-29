@@ -1,18 +1,19 @@
 //
-//  Person.swift
+//  Users.swift
 //  Friends-Storyboard
 //
-//  Created by Boris Ofon on 11/28/22.
+//  Created by Boris Ofon on 11/29/22.
 //
 
 import Foundation
 
-struct Person {
-    let name: String
+class Person: Codable {
+    
+    let username: String
     let email: String
     
-    init(name: String, email: String) {
-        self.name = name
+    init(username: String, email: String) {
+        self.username = username
         self.email = email
     }
 }

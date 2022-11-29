@@ -20,16 +20,7 @@ class HomeScreenViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        // for testing only
-        let person1 = Person(name: "John", email: "john@gmail.com")
-        let person2 = Person(name: "Peter", email: "Peter@gmail.com")
-        let person3 = Person(name: "Wanye", email: "wayne@gmail.com")
-        let person4 = Person(name: "Bruno", email: "Bruno@gmail.com")
         
-        people.append(person1)
-        people.append(person2)
-        people.append(person3)
-        people.append(person4)
         
     }
 
@@ -47,7 +38,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         let currentPerson = people[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HomeScreenCell
-        cell.nameLabel.text = currentPerson.name
+        cell.nameLabel.text = currentPerson.username
         cell.emailLabel.text = currentPerson.email
         
         return cell
@@ -67,7 +58,7 @@ extension HomeScreenViewController{
         if segue.identifier == "goToDetail" {
             
             let detailViewController = segue.destination as! DetailViewController
-            detailViewController.detailTitle = selectedPerson?.name
+            detailViewController.detailTitle = selectedPerson?.username
             
         }
     }
