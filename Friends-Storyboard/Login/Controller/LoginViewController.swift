@@ -17,8 +17,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        errorMassgeLabel.isHidden = true
+        passwordTextField.isSecureTextEntry = true
         
     }
     
@@ -56,7 +55,7 @@ extension LoginViewController {
             errorMassgeLabel.text =  "Username / password cannot be blank"
             return false
         }
-        if username == "Kevin" && password == "Kevin1234" {
+        if username.lowercased() == "kevin" && password == "Kevin1234" {
             return true
         } else {
             errorMassgeLabel.text =  "Username / password wrong"
