@@ -11,7 +11,7 @@ class HomeScreenViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var people = [Person]()
+    let people = PersonList()
     var selectedPerson: Person?
     
     override func viewDidLoad() {
@@ -31,11 +31,11 @@ class HomeScreenViewController: UIViewController {
 extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        people.count
+        people.getCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentPerson = people[indexPath.row]
+        let currentPerson = people.getFriendAtPosition(indexPath.row)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HomeScreenCell
         cell.nameLabel.text = currentPerson.username
@@ -45,7 +45,8 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPerson = people[indexPath.row]
+        
+        selectedPerson = people.getFriendAtPosition(indexPath.row)
         performSegue(withIdentifier: "goToDetail", sender: self)
     }
 }

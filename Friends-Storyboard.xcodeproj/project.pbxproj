@@ -96,16 +96,15 @@
 		81A32E492935496E001CCF81 /* Friends-Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				81F6741A2935596700B1793C /* Model */,
 				81A32E4A2935496E001CCF81 /* AppDelegate.swift */,
 				81A32E502935496E001CCF81 /* Main.storyboard */,
 				81A32E5829354970001CCF81 /* Info.plist */,
+				81A32E5E29354983001CCF81 /* Files */,
+				81F6741A2935596700B1793C /* Model */,
 				81A32E5F293549A8001CCF81 /* Login */,
 				81A32E60293549BE001CCF81 /* HomeScreen */,
 				81A32E61293549D3001CCF81 /* Details */,
-				81A32E5E29354983001CCF81 /* Files */,
-				81F6745F29362D4500B1793C /* FriendsApiClient.swift */,
-				81F67463293636B800B1793C /* FriendsApiclientProtocol.swift */,
+				81F6747B2937926600B1793C /* Networking */,
 			);
 			path = "Friends-Storyboard";
 			sourceTree = "<group>";
@@ -123,7 +122,6 @@
 		81A32E5F293549A8001CCF81 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				81A32E6329354A12001CCF81 /* View */,
 				81A32E6229354A06001CCF81 /* Controller */,
 			);
 			path = Login;
@@ -153,13 +151,6 @@
 				81A32E6829354B14001CCF81 /* LoginViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		81A32E6329354A12001CCF81 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		81A32E6429354A1F001CCF81 /* Controller */ = {
@@ -218,6 +209,15 @@
 				81F67473293639C600B1793C /* MockFriendsApiCient.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		81F6747B2937926600B1793C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				81F67463293636B800B1793C /* FriendsApiclientProtocol.swift */,
+				81F6745F29362D4500B1793C /* FriendsApiClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

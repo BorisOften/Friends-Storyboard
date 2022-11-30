@@ -9,7 +9,7 @@ import Foundation
 
 protocol FriendApiClientDelegate {
     
-    func login(username: String,password: String, completionHandler: @escaping ([Person]?, Error?) -> Void)
+    func login(username: String,password: String, completionHandler: @escaping (Person?, Error?) -> Void)
     
     func getFriendsList(completionHandler: @escaping([Person]?, Error?) -> Void)
     

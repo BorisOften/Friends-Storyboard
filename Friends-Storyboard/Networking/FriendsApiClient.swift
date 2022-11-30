@@ -5,6 +5,10 @@
 //  Created by Boris Ofon on 11/29/22.
 //
 
+
+// This is what what a api call to a client will look like
+// This file wont be used for this project
+
 import Foundation
 
 class FriendsApiClient {
@@ -14,7 +18,7 @@ class FriendsApiClient {
     }
     
    // since i am mocking, these is not really used
-    private func executeRequest(urlRequest: URLRequest, completionHandler: @escaping ([Person]?, Error?) -> Void){
+    private func executeRequest(urlRequest: URLRequest, completionHandler: @escaping (Person?, Error?) -> Void){
         
         let urlSession = URLSession.shared
         
@@ -27,7 +31,7 @@ class FriendsApiClient {
             }
             
             do {
-                guard let jsonDic = try JSONSerialization.jsonObject(with: data,options: []) as? [Person] else {
+                guard let jsonDic = try JSONSerialization.jsonObject(with: data,options: []) as? Person else {
                     completionHandler(nil,APIError.serviceError)
                     return
                 }
@@ -42,11 +46,23 @@ class FriendsApiClient {
 }
 
 extension FriendsApiClient: FriendApiClientDelegate {
+    func getFriendsList(completionHandler: @escaping ([Person]?, Error?) -> Void) {
+        
+        
+        guard let url = URL(string: "https://for-testing-only") else {
+            print(APIError.serviceError)
+            return
+        }
+        //getting the friend list
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+    }
     
-    func login(username: String,password: String, completionHandler: @escaping ([Person]?, Error?) -> Void){
+    
+    func login(username: String,password: String, completionHandler: @escaping (Person?, Error?) -> Void){
         
         
-       guard let url = URL(string: "https://localhost") else {
+       guard let url = URL(string: "https://for-testing-only") else {
             completionHandler(nil,APIError.serviceError)
             return
         }
@@ -58,21 +74,5 @@ extension FriendsApiClient: FriendApiClientDelegate {
         
         executeRequest(urlRequest: urlRequest, completionHandler: completionHandler)
         
-        
-    }
-    
-    func getFriendsList(completionHandler: @escaping([Person]?, Error?) -> Void) {
-        
-        
-        guard let url = URL(string: "http://localhost") else {
-            print(APIError.serviceError)
-            return
-        }
-        
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "GET"
-        
-        executeRequest(urlRequest: urlRequest, completionHandler: completionHandler)
-         
     }
 }

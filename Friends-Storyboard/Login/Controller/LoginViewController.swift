@@ -22,19 +22,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         
+        // perform Api client verification
+        // if passed then move on to the home screen
+        
+        //i did not perform the check because i dont have the api yet
+        // SO clicking to the login button goes directly to the homescreen
+        
+        
         performSegue(withIdentifier: "goToHome", sender: self)
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
